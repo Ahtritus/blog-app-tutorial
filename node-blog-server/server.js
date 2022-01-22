@@ -17,6 +17,8 @@ app.get("/", (req, res) => {
   res.json("Welcome to the backend server");
 });
 
+require("./app/routes/blog.routes")(app);
+
 app.listen(PORT, () => {
   console.log(`Server started on port ${PORT}`);
 });
